@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import ProductOptions from "./ProductOptions";
 import {SideBarStyles, SideBarTitle, SideBarButton, SideBarItems, SideBarItem} from './styles';
 import { IoAppsOutline, IoPeopleOutline, IoLogOutOutline, IoCarSportOutline, IoCalendar, IoBasketOutline, IoCalendarNumberOutline, IoCaretForwardCircleOutline, IoMailOpenOutline, IoLogoWhatsapp } from "react-icons/io5";
 
@@ -16,6 +17,7 @@ function SideBar() {
     return ( 
         <SideBarStyles>
             <SideBarTitle><IoAppsOutline />&nbsp;&nbsp;DASHBOARD</SideBarTitle>
+            <ProductOptions/>
             
             <SideBarItems>
                 <SideBarItem><SideBarButton><IoPeopleOutline />&nbsp;&nbsp;PROFILE</SideBarButton></SideBarItem>

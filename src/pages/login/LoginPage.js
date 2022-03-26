@@ -54,7 +54,7 @@ function LoginPage(props) {
         <LoginPageContainer>
           <LoginPageLeft>
             <header>
-              <h2>StoreFront Dashboard</h2>
+              <h1>Man U Need Rental</h1>
               <p><IoCarSportOutline size="15rem"/></p>
               </header>
           </LoginPageLeft>

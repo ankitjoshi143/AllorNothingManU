@@ -3,7 +3,10 @@ import styled from "styled-components";
 
 const LoginPageStyles = styled.section`
   margin: 4rem auto 0;
-  max-width: 480px;
+  //max-width: 480px;
+  display: flex;
+  align-items: center;    
+  justify-content: center;
   h2 {
     text-align: center;
     font-size: 2rem;
@@ -77,7 +80,6 @@ const LoginPageContainer = styled.div `
     align-items: center;    
     justify-content: center;
     margin: 0 auto;
-    width: 150%;
     height: auto;
 
 `;

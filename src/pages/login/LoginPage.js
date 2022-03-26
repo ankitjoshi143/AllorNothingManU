@@ -12,7 +12,7 @@ import { SubmitButton } from "../../ui/buttons";
 import {LoginPageStyles, FormControl} from './styles'
 
 //import {Form, Button, Container, Row, Col} from "react-bootstrap";
-import logo from '../../../src/logo.png';
+//import logo from '../../../src/logo.png';
  
 
 function LoginPage(props) {

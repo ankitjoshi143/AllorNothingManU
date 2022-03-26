@@ -27,7 +27,7 @@ const IconButton = styled(Button)`
 const SubmitButton = styled(Button)`
     background-color: ${props => props.bc || "cornflowerblue"};
     color: ${props => props.color || "white"}; ;
- 
+    width: 100%;
     font-weight: ${props => props.fw || '700'}; 
     font-size: ${props => props.fs || '14px'};
 `

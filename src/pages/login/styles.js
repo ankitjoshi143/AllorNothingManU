@@ -23,8 +23,68 @@ const LoginPageStyles = styled.section`
     fill:white;
 }
 `;
-const FormControl = styled.div`
-  margin: 1rem 0;
+
+const LoginPageRight = styled.div `
+    background-color: #FFEDDB;
+    height: 25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+
+    Button {
+    font-size: 1rem;
+    padding: 0.25rem;
+    border: 1px solid #694E4E;
+  }
+
+  Button:hover {
+    background-color: #FAEEE0;
+    color: #694E4E;
+    border: 1px solid #694E4E;
+    cursor: pointer;
+  }
 `;
 
-export {LoginPageStyles, FormControl}
+const LoginPageLeft = styled.div `
+    text-align: center;
+    width: 100%;
+    background-color: #EDCDBB;
+    height: 25rem;
+    padding-top: 1rem;
+    border-radius: 10px 0 0 10px;
+    
+    h1 {
+        font-size: 3rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    p {
+        font-family: 'Brush Script MT', cursive;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    p:last-child {
+        text-align: center;
+        padding: 0;
+        font-size: 3rem;
+    }
+`;
+
+const LoginPageContainer = styled.div `
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    margin: 0 auto;
+    width: 150%;
+    height: auto;
+
+`;
+
+const FormControl = styled.div`
+  margin: 1rem 0;
+  background-color: #ffeddb;
+`;
+
+export {LoginPageStyles, LoginPageContainer, LoginPageRight, LoginPageLeft, FormControl}

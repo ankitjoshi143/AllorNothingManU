@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import {MdError} from 'react-icons/md'
+import {MdError} from 'react-icons/md';
+import {IoCarSportOutline} from "react-icons/io5";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {auth} from "./../../libs/firebase"
 import { Label, Input } from "./../../ui/forms";
 import { SubmitButton } from "../../ui/buttons";
-import {LoginPageStyles, FormControl} from './styles'
+import {LoginPageStyles, LoginPageContainer, LoginPageLeft, LoginPageRight, FormControl} from './styles'
 
 //import {Form, Button, Container, Row, Col} from "react-bootstrap";
 //import logo from '../../../src/logo.png';
@@ -50,33 +51,38 @@ function LoginPage(props) {
     <>
       <LoginPageStyles>
         <ToastContainer/>
+        <LoginPageContainer>
+          <LoginPageLeft>
+            <header>
+              <h2>StoreFront Dashboard</h2>
+              <p><IoCarSportOutline size="15rem"/></p>
+              </header>
+          </LoginPageLeft>
 
-        <header>
-          <h2>StoreFront Dashboard</h2>
-        </header>
+          <LoginPageRight>
+            <form onSubmit={onLoginRequest}>
+              <FormControl className="form-control">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="text" placeholder="janedoe@gmail.com" onChange={(e)=> setEmail(e.target.value)}/>
+              </FormControl>
 
-        <form onSubmit={onLoginRequest}>
-          <FormControl className="form-control">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="text" placeholder="janedoe@gmail.com" onChange={(e)=> setEmail(e.target.value)}/>
-          </FormControl>
-
-          <FormControl className="form-control">
-            <Label htmlFor="password">Password</Label>
-            <Input id="password" type="text" placeholder="account password" onChange={(e)=>setPassword(e.target.value)} />
-          </FormControl>
-          <FormControl className="form-control">
-            <SubmitButton
-              type="submit"
-              padding="0.88rem"
-              margin="1rem 0 0"
-              fs="1rem"
-              bg="orange"
-            >
-              log in to dashboard
-            </SubmitButton>
-          </FormControl>
-        </form>
+              <FormControl className="form-control">
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" type="text" placeholder="account password" onChange={(e)=>setPassword(e.target.value)} />
+              </FormControl>
+              <SubmitButton
+                  type="submit"
+                  padding="0.88rem"
+                  margin="1rem 0 0"
+                  fs="1rem"
+                  bg="orange"
+                  width="100%"
+                >
+                  log in to dashboard
+                </SubmitButton>
+            </form>
+          </LoginPageRight>
+        </LoginPageContainer>
       </LoginPageStyles>
     </>
   );

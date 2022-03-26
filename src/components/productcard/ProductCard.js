@@ -9,7 +9,7 @@ function ProductCard({ children, ...props }) {
   return (
     <ProductCardStyles {...props}>
       <ProductImage>
-        <img src={placeholderImage} alt="future car image"/>
+        <img src={placeholderImage} alt="future car"/>
       </ProductImage>
       <ProductName>Mercedes Benz</ProductName>
       <ProductPrice>$257,999.99</ProductPrice>

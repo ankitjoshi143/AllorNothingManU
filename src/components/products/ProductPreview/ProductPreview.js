@@ -6,7 +6,7 @@ function ProductPreview ({children, productName, productPrice, productDescriptio
   return (
         <ProductPreviewStyles  {...props}>
           <ProductImage>
-            <img src={productImage} alt="car image" width="320" height="184"/>
+            <img src={productImage} alt="car" width="320" height="184"/>
           </ProductImage>
           <ProductName>{productName}</ProductName>
           <ProductPrice>${productPrice}</ProductPrice>

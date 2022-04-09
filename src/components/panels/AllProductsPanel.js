@@ -1,48 +1,23 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, {useState, useEffect}  from "react";
 
+import { useGetProducts } from "hooks/useGetProducts";
 import {PanelStyles, PanelTitle, PanelBody} from './styles'
-
-import {auth} from 'libs/firebase'
-
-import { ProductCard } from "components/productcard"
-import { onAuthStateChanged } from 'firebase/auth';
+import { ProductCard } from "components/products/productcard"
 
 function AllProductsPanel ({title, ...props}) {
     
-    const [isUser, setIsUser ] = useState(false);
-    const nav = useNavigate()
-
-    onAuthStateChanged(auth, (user) => {
-        if (user ) {
-            setIsUser(true)
-        } else {
-            setIsUser(false);
-            nav("/");
-        }
-    });
-
-    if(isUser) {
+    const productData = useGetProducts()
+    
         return (
             <PanelStyles>
                 <PanelTitle>
                     <h2>{title || "Display Panel" }</h2>
                 </PanelTitle>
                 <PanelBody>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
-                    <ProductCard/>
+                {productData?  productData.map(product=><ProductCard key={product.uid} product={product}/>) :  null}
                 </PanelBody>
             </PanelStyles>
         )
-
-
-    }
-
-    return null;
     
 
 }

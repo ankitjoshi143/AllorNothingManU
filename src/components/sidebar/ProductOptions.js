@@ -22,9 +22,9 @@ function ProductOptions  (props){
             <li>
               <Link to="add">Add New Products</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="edit">Edit Products</Link>
-            </li>
+            </li> */}
         </ProductOptionStyles>
         </>
     )

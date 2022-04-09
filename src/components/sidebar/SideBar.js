@@ -1,18 +1,17 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import { Link } from 'react-router-dom'
+
 import ProductOptions from "./ProductOptions";
 import {SideBarStyles, SideBarTitle, SideBarButton, SideBarItems, SideBarItem} from './styles';
 import { IoAppsOutline, IoPeopleOutline, IoLogOutOutline, IoCarSportOutline, IoCalendar, IoBasketOutline, IoCalendarNumberOutline, IoCaretForwardCircleOutline, IoMailOpenOutline, IoLogoWhatsapp } from "react-icons/io5";
 
+import { signOut } from "firebase/auth";
+import { auth } from "libs/firebase";
 
-function SideBar() {
-
-    let navigation = useNavigate();
-    function onHandleSubmit(evt) {
-        evt.preventDefault();
-        navigation('/');
-
-    }
+function SideBar (props) {
+    function onLogOutRequest(e) {
+        signOut(auth);
+      }
 
     return ( 
         <SideBarStyles>
@@ -21,7 +20,7 @@ function SideBar() {
             
             <SideBarItems>
                 <SideBarItem><SideBarButton><IoPeopleOutline />&nbsp;&nbsp;PROFILE</SideBarButton></SideBarItem>
-                <SideBarItem><SideBarButton onClick={onHandleSubmit}><IoLogOutOutline />&nbsp;&nbsp;LOGOUT</SideBarButton></SideBarItem>
+                <SideBarItem><SideBarButton onClick={onLogOutRequest}><IoLogOutOutline />&nbsp;&nbsp;LOGOUT</SideBarButton></SideBarItem>
             </SideBarItems>
 
             <SideBarItems>

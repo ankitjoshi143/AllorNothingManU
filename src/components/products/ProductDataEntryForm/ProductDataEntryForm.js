@@ -27,7 +27,7 @@ function ProductDataEntryForm ({children, handleProductName, handleProductPrice,
           </fieldset>
           <ProductDescription>
           <Label>Product Description</Label>
-            <TextArea onChange={(e)=>handleProductDescription(e.target.value.trim())} maxLength={300}/>
+            <TextArea onChange={(e)=>handleProductDescription(e.target.value.trim())} rows={5}/>
           </ProductDescription>
 
           <div>

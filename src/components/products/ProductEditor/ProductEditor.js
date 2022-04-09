@@ -11,8 +11,8 @@ function ProductEditor ({children, productName, productPrice, productDescription
           handleProductName={handleProductName}
           handleProductPrice={handleProductPrice}
           handleProductDescription={handleProductDescription}
-          handleSubmit={handleSubmit}
           setProductImage={setProductImage}
+          handleSubmit={handleSubmit}
           />
           
           <ProductPreview 

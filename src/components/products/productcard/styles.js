@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const ProductCardStyles = styled.div`
+const ProductCardStyles = styled.aside`
+width: 200px;
+align-self: stretch;
   margin: 0.75rem;
   padding: 0.5rem;
   text-align: center;

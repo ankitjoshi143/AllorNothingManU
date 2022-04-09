@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom'
 
 import ProductOptions from "./ProductOptions";
 import {SideBarStyles, SideBarTitle, SideBarButton, SideBarItems, SideBarItem} from './styles';
